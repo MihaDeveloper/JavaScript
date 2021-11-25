@@ -5,4 +5,4 @@ rollback,
 fullPrice,
 adaptive;
 alert("Hello, Everyone!");
-console.log("Lesson 1");
+console.log("Lesson 1!");
