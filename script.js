@@ -1,4 +1,4 @@
-let title = "Lesson2",
+let title = prompt(" Как называется ваш проект? "),
 screens = "Простые , Сложные , Интерактивные",
 screenPrice = 7771,
 rollback = 33,
