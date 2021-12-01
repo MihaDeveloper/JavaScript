@@ -13,9 +13,9 @@ let servicePrice2 = 0 ;
 if(service2 != undefined) {
     servicePrice2 = +prompt("Сколько это будет стоить?");
 }
-let rollback = 33.7;
+let rollback = 33;
 let fullPrice = screenPrice + servicePrice1 + servicePrice2;
-let servicePercentPrice = fullPrice - rollback;
+let servicePercentPrice = fullPrice - (fullPrice*(rollback/100));
 console.log(Math.ceil(servicePercentPrice));
 if (fullPrice>=30000) {
     console.log("Даем скидку 10%");
