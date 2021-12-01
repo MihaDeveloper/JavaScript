@@ -29,6 +29,7 @@ else if(0<=fullPrice && fullPrice<1500){
 else{
     console.log("Что-то пошло не так");
 }
+alert("\u1976");
 /* console.log(typeof(title));
 console.log(typeof(fullPrice));
 console.log(typeof(adaptive));
