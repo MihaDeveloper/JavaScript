@@ -1,9 +1,10 @@
 'use strict';
- let title = prompt(" Как называется ваш проект? ");
- let screens =prompt(" Какие типы экранов нужно разработать?"); 
+let title = prompt(" Как называется ваш проект? ");
+let screens =prompt(" Какие типы экранов нужно разработать?"); 
 let screenPrice = +prompt("Сколько будет  стоить данная работа?"); 
 let adaptive = confirm("Нужен ли адаптив на сайте?"); 
 let service1 = prompt("Какой дополнительный тип услуги нужен?");
+
 let servicePrice1 = 0;
 if(service1 != undefined) {
     servicePrice1 = +prompt("Сколько это будет стоить?");
@@ -13,10 +14,32 @@ let servicePrice2 = 0 ;
 if(service2 != undefined) {
     servicePrice2 = +prompt("Сколько это будет стоить?");
 }
-let rollback = 33;
-let fullPrice = screenPrice + servicePrice1 + servicePrice2;
-let servicePercentPrice = fullPrice - (fullPrice*(rollback/100));
-console.log(Math.ceil(servicePercentPrice));
+const rollback = 33;      
+
+function arrayScreens(){
+    console.log(screens.split(" "));
+}
+arrayScreens();
+
+const getAllServicePrices = function (){
+    return servicePrice1 + servicePrice2;
+};
+let allServicePrices = getAllServicePrices();
+function getFullPrice (){
+    return screenPrice + allServicePrices;
+}
+let fullPrice = getFullPrice ();
+const getServicePercentPrices = function (){
+    return console.log(fullPrice - (fullPrice*(rollback/100)));
+};
+getServicePercentPrices ();
+
+ const getTitle = function (){
+    return title.trim()[0].toUpperCase + title.trim().substr(1).toLowerCase;
+    };
+getTitle();
+
+const getRollbackMessage = function (fullPrice) {
 if (fullPrice>=30000) {
     console.log("Даем скидку 10%");
 }
@@ -29,11 +52,12 @@ else if(0<=fullPrice && fullPrice<1500){
 else{
     console.log("Что-то пошло не так");
 }
-alert("\u1976");
-/* console.log(typeof(title));
-console.log(typeof(fullPrice));
-console.log(typeof(adaptive));
-console.log(screens.length);
-console.log(screenPrice , fullPrice);
-console.log(screens.toLowerCase().split("  "));
-console.log(fullPrice*(rollback/100)); */
+};
+getRollbackMessage(); 
+
+const showTypeOf = function (type){
+   return console.log(typeof(type));
+};
+showTypeOf(title);
+showTypeOf(fullPrice);
+showTypeOf(adaptive);
