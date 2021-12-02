@@ -37,8 +37,8 @@ getServicePercentPrices ();
  const getTitle = function (){
     return title.trim()[0].toUpperCase + title.trim().substr(1).toLowerCase;
     };
-getTitle();
-
+title = getTitle();
+console.log("title");
 const getRollbackMessage = function (fullPrice) {
 if (fullPrice>=30000) {
     console.log("Даем скидку 10%");
