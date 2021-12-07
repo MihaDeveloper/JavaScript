@@ -1,17 +1,18 @@
 'use strict';
-let title,
-screens, 
-screenPrice, 
-adaptive, 
-service2,
-service1,
-fullPrice,
-ServicePercentPrices,
-allServicePrices;
+let title;
+let screens;
+let screenPrice;
+let adaptive; 
+let service2;
+let service1;
+let fullPrice;
+let ServicePercentPrices;
+let allServicePrices;
 const rollback = 33;     
 
 const isNumber = function (num){
     return !isNaN(parseFloat(num)) && isFinite(num) ;
+
 };
 
 const asking = function (){
@@ -19,9 +20,10 @@ const asking = function (){
     screens =prompt(" Какие типы экранов нужно разработать?"); 
         do{
         screenPrice = prompt("Сколько будет  стоить данная работа?"); 
+     
     }
     while(!isNumber(screenPrice));
-
+    screenPrice = screenPrice.trim();
     adaptive = confirm("Нужен ли адаптив на сайте?"); 
 };
 
@@ -86,7 +88,7 @@ screens = console.log(arrayScreens());
 ServicePercentPrices = getServicePercentPrices ();
 title = getTitle();
 
-
+console.log(screenPrice);
 showTypeOf(title);
 showTypeOf(fullPrice);
 showTypeOf(adaptive);
