@@ -1,4 +1,18 @@
 'use strict';
+const title = document.getElementsByTagName('h1')[0];
+const handlerBtn=document.getElementsByClassName('handler_btn');
+const plus=document.querySelector('.screen-btn');
+const items1=document.querySelectorAll('.other-items.percent');
+const items2=document.querySelectorAll('.other-items.number');
+const inputRange =document.querySelector('.rollback input');
+const getSpan=document.querySelector('.rollback span');
+const input1=document.getElementsByClassName('total-input')[0];
+const input2=document.getElementsByClassName('total-input')[1];
+const input3=document.getElementsByClassName('total-input')[2];
+const input4=document.getElementsByClassName('total-input')[3];
+const input5=document.getElementsByClassName('total-input')[4];
+
+let Screen=document.querySelectorAll('.screen');
 
 const appData = {
  title: '',
@@ -121,8 +135,8 @@ arrayScreens:function(){
    
     
 };
-appData.start();
-
+//appData.start();
+ 
 
 
 
